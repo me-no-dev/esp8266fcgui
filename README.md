@@ -96,9 +96,9 @@ All web content is created by the KISS and BetaFlight teams. This a cut-down ver
 ![image](doc/mac_browser.png)
 
 ### Mobile
-![image](doc/mobile_bf.png)
-![image](doc/mobile_bf2.png)
-![image](doc/mobile_bf3.png)
+![image](doc/mobile_bf.PNG)
+![image](doc/mobile_bf2.PNG)
+![image](doc/mobile_bf3.PNG)
 
 ### Hardware
 ![image](doc/esp8266fcgui.jpg)
