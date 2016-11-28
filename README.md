@@ -18,7 +18,7 @@ KISS and BetaFlight GUI on ESP8266
 ## I want to try it!
 
 ### Requirements
-- ESP8266 module with 4MB flash
+- ESP8266 module with at least 4MB flash. [This module](https://www.wemos.cc/product/d1-mini-pro.html) weights 2.5g and is ready to go
 - Recent version of [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 - Latest [Arduino ESP8266 filesystem uploader](https://github.com/esp8266/arduino-esp8266fs-plugin) plugin installed
 - Git version of [ESP8266 Arduino](https://github.com/esp8266/Arduino#using-git-version)
