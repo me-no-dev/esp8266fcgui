@@ -1,0 +1,62 @@
+<div class="data_output">
+	<div class="receiver wrapper-narrow">
+        <div class="groupTitle">Receiver</div>
+        <div class="bars">
+        </div>
+    </div>
+    <div class="motors wrapper-narrow">
+        <div id="motorTestTitle" class="groupTitle"><span>Motors</span> <a class="motor-test-button" href="#" style="font-size:11px;">TEST</a> <input style="display:none" type="checkbox" class="motor-test-enabled"/></div>
+        <div class="bars">
+        </div>
+    </div>
+    <div class="other wrapper-narrow">
+        <div class="groupTitle">Other</div>
+        <table class="otherValues">
+        	<tr><td>Mode:</td><td id="omode">&nbsp;</td><td>Status:</td><td id="ostatus">&nbsp;</td></tr>
+        	<tr><td>AngleX:</td><td id="oanglex">&nbsp;</td><td>Idle:</td><td id="idle">&nbsp;</td></tr>
+        	<tr><td>AngleY:</td><td id="oangley">&nbsp;</td><td>Voltage:</td><td id="Vbat">&nbsp;</td></tr>
+        	<tr><td colspan="4"><a class="calibrateAccelerometer" href="#" style="font-size:11px;">Calibrate Accelerometer</a></td></tr>
+        </table>
+    </div>
+    <div class="clear-both"></div>
+    <div class="plot">
+        <div class="groupTitle">Telemetry 
+		<select name="graphTitle" style="position: relative; top:-1px;">
+		    <option value="0">Gyro &amp; ACC Data:</option>
+	       <!--<option value="1">ESC Temperatures:</option>
+		    <option value="2">ESC Voltanges:</option>
+		    <option value="3">ESC Currents:</option>
+		    <option value="4">ESC used W/h</option>
+		    <option value="5">ESC E-RpM / 1000</option> -->
+		</select>
+	</div>
+        <dl class="legend">
+            <dt id="graph1">Gyroscope X:</dt><dd>&nbsp;</dd>
+            <dt id="graph2">Gyroscope Y:</dt><dd>&nbsp;</dd>
+            <dt id="graph3">Gyroscope Z:</dt><dd>&nbsp;</dd>
+            <dt id="graph4">Accelerometer X:</dt><dd>&nbsp;</dd>
+            <dt id="graph5">Accelerometer Y:</dt><dd>&nbsp;</dd>
+            <dt id="graph6">Accelerometer Z:</dt><dd>&nbsp;</dd>
+        </dl>
+        <canvas id="graph" width="100" height="190"></canvas>
+	<div style="color:#FFF;">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		GXmax:<span id="gxmax">0</span> | GXmin:<span id="gxmin">0</span> | 
+		GYmax:<span id="gymax">0</span> | GYmin:<span id="gymin">0</span> | 
+		GZmax:<span id="gzmax">0</span> | GZmin:<span id="gzmin">0</span> 
+	</div>
+    </div>
+</div>
+<div class="motor-test-disclaimer">
+	<div class="motor-test-disclaimer-inner">
+		<div class="warning1">WARNING!!!</div>
+		<div class="warning2">		
+		 Caution - potentially dangerous!<br/><br/>
+		 Please remove propellers before starting the motor test!<br/><br/>
+		 Use this feature at your own risk.<br/><br/>
+		 It will only work when the FC is disarmed.<br/><br/>
+		</div>
+		<br/><br/>
+		<a class="warning-button" href="#">I KNOW WHAT I AM DOING</a>
+	</div>
+</div>

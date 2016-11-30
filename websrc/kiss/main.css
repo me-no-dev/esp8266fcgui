@@ -1,0 +1,317 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+    overflow-y: visible;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: white;
+	background-color: #1e1e1e;
+}
+
+a {
+	text-decoration: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+	opacity: 1;
+	margin-left: 5px;
+}
+
+.clear-both {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+#mainWrapper {
+	height: 100%;
+}
+
+.inputSpinners {
+	position: absolute;
+	width: 15px;
+	top: 1px;
+}
+
+.inputSpinners div {
+	display: block;
+	width: 15px;
+	height: 10px;
+	background-color: #f1f1f1;
+}
+
+.inputSpinners div:hover {
+	background-color: #d2d2d2;
+}
+
+.inputSpinners div:nth-child(1) {
+	background-image: url('./images/triangleArrowUp.gif');
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+}
+
+.inputSpinners div:nth-child(2) {
+	background-image: url('./images/triangleArrowDown.gif');
+	background-position: 4px 3px;
+	background-repeat: no-repeat;
+}
+
+.inputSpinners div:active {
+	background-color: #787878;
+}
+
+#portArea {
+	margin: 0 0 10px 0;
+	padding: 0 5px 0 0;
+	height: 30px;
+	border-bottom: 2px solid #ad0d0d;
+}
+
+#portArea #port {
+	float: left;
+	margin: 5px 0 0 5px;
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #ad0d0d;
+}
+
+#portArea .connect {
+	float: left;
+	margin: 5px 0 0 5px;
+	height: 18px;
+	line-height: 18px;
+	width: 90px;
+	font-weight: bold;
+	color: #f2ffff;
+	text-align: center;
+	border: 1px solid #ad0d0d;
+	background-color: #ad0d0d;
+}
+
+#portArea .connect:hover {
+	background-color: #d01414;
+}
+
+#navigation {
+	float: right;
+	margin: 5px 0 0 0;
+}
+
+#navigation li {
+	margin: 0 0 0 5px;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px 0 10px;
+	text-align: center;
+	
+	background-color: #430505;
+    color: #888;
+}
+
+#navigation li.unlocked {
+	cursor: pointer;
+	background-color: #830a0a;
+	color: #fff;
+}
+
+
+#navigation li.unlocked:hover {
+	cursor: pointer;
+	background-color: #d01414;
+	color: #fff;
+}
+
+#navigation li.hidden {
+	display: none;
+}
+
+#content {
+	position: relative;
+	padding: 10px;
+	margin: 0 0 0 10px;
+	width: calc(100% - 40px);
+	height: calc(100% - 70px);
+	/*
+    border: 2px solid #ad0d0d;
+    */
+}
+
+.groupTitle {
+	padding: 0 0 5px 0;
+	margin: 0 0 5px 0;
+	font-size: 16px;
+	color: #e09338;
+}
+
+.config_button {
+	margin: 0 0 0 2px;
+	color: white;
+	height: 20px;
+	line-height: 20px;
+	background-color: #339933;
+	text-align: center;
+	padding: 2px 10px 3px 10px;
+}
+
+.config_button:hover {
+	background-color: #d01414;
+}
+
+.config_buttons {
+	position: fixed;
+	right: 10px;
+	height: 20px;
+	bottom: 25px;
+	padding: 0px;
+}
+
+.navigation-menu-button  {
+	float: right;
+	margin: 5px 0 0 5px;
+	height: 18px;
+	line-height: 18px;
+	font-weight: bold;
+	width: 90px;
+	color: #f2ffff;
+	text-align: center;
+	border: 1px solid #ad0d0d;
+	background-color: #ad0d0d;
+	display: none;
+}
+
+.navigation-menu-button:hover {
+	background-color: #d01414;
+}
+
+.wrapper-wide {
+	float: left;
+	width: 65%;
+	padding: 5px;
+	padding-left: 2px;
+}
+
+.wrapper-narrow {
+	float: left;
+	width: calc(33% - 20px);
+	padding: 5px;
+	padding-left: 2px;
+}
+
+.wrapper-half {
+	float: left;
+	width: calc(50% - 10px);
+	padding: 5px;
+	padding-left: 2px;
+}
+
+.wrapper-full {
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 20px;
+		clear: both;
+		padding-left: 2px;
+}
+
+@media ( max-width : 824px) {
+	.wrapper-wide {
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 10px;
+		clear: both;
+	}
+	.wrapper-narrow {
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 10px;
+		clear: both;
+	}
+	.wrapper-half {
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 10px;
+		clear: both;
+	}
+	.wrapper-full {
+		margin-bottom: 10px;
+	}
+	.navigation-menu-button {
+		display: inline-block;
+	}	
+	#navigation {
+		display: none;
+	}
+	#navigation.active-menu {
+    	display: inline;
+    	z-index: 100;
+		position: fixed;
+		left: calc(100% - 150px);
+    	top: 30px;
+	}
+	#navigation li {
+		margin: 0px;
+		float: none;
+		height: 30px;
+    	line-height: 30px;
+    	margin-bottom: 2px;
+    	width: 120px;
+	} 
+	#menu {
+		background-color: black;
+    	padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 1px;
+	}
+	
+	.configuration .rates tr > *:nth-child(1) {
+		display: inline;
+	}
+	
+	#portArea #port {
+		width: 90px;
+	}
+	
+	.mixer-image {
+	    width: 200px;
+    	position: absolute;
+    	left: 125px;
+    	top: 15px;
+    }
+    
+	.groupTitle {
+		padding: 0 0 2px 0;
+		margin: 0 0 2px 0;
+		font-size: 16px;
+		color: #e09338;
+	}
+	
+	#userSel {
+		width: 50px;
+	}
+
+	#presetSel {
+		width: 50px;
+	}
+	
+	#lapTimerTypeAndInterface {
+		width: 90px;
+	}
+	
+}

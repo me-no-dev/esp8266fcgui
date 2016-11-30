@@ -1,0 +1,53 @@
+<div class="rates">
+	<div class="wrapper-narrow">
+    	<div class="receiver">
+        <div class="groupTitle">Receiver</div>
+        <div class="bars"></div>
+        
+        <div class="groupTitle">Rates</div>
+        	<table class="rc_rates">
+				<tr>
+					<th class="name"></th>
+					<th class="rate">RC Rate</th>
+					<th class="expo">Rate</th>
+					<th class="curve">RC Curve</th>
+				</tr>
+		<tr class="roll">
+			<td class="name">Roll</td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+		</tr>
+		<tr class="pitch">
+			<td class="name">Pitch</td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+		</tr>
+		<tr class="yaw">
+			<td class="name">Yaw</td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+			<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+		</tr>
+	</table>
+    </div>
+    
+    </div>
+
+	<div class="wrapper-wide">
+        <div class="groupTitle">Charts</div>
+	<div id="charts">
+		<div id="rates_chart_roll" class="rc_chart"></div>
+		<div id="rates_chart_pitch" class="rc_chart"></div><br/>
+		<div id="rates_chart_yaw" class="rc_chart"></div>
+		<div id="model" class="rc_chart"></div>
+	</div>
+    </div>
+
+		<div class="config_buttons">
+			<a id="save" class="config_button" href="#"
+				title="Save Settings to EEPROM">Save Settings</a>
+		</div>
+		<div class="clear-both"></div>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="flyduino" />
+  		
+  		<link type="text/css" rel="stylesheet" href="./js/libraries/jquery.minicolors.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./content/welcome.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./content/configuration.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./content/data_output.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./content/rates.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./content/tpa.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./js/plugins/jquery.kiss.aux.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="./main.css" media="all" />
+  
+        <script type="text/javascript" src="./js/libraries/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="./js/libraries/three.min.js"></script>
+        <script type="text/javascript" src="./js/input_validation.js"></script>
+        <script type="text/javascript" src="./js/gui.js"></script>
+        <script type="text/javascript" src="./js/websocket_serial.js"></script>
+        <script type="text/javascript" src="./js/serial.js"></script>
+        <script type="text/javascript" src="./js/connection_handler.js"></script>
+        <script type="text/javascript" src="./js/protocol.js"></script>
+		<script type="text/javascript" src="./js/libraries/hex_parser.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
+        <script type="text/javascript" src="./content/welcome.js"></script>
+        <script type="text/javascript" src="./content/configuration.js"></script>
+        <script type="text/javascript" src="./content/advanced.js"></script>
+        <script type="text/javascript" src="./content/data_output.js"></script>
+		<script type="text/javascript" src="./js/plugins/jquery.kiss.rates.chart.js"></script> 
+		<script type="text/javascript" src="./js/plugins/jquery.kiss.model.js"></script>
+		<script type="text/javascript" src="./js/plugins/jquery.kiss.tpa.chart.js"></script>
+		<script type="text/javascript" src="./js/plugins/jquery.kiss.aux.js"></script>
+		<script type="text/javascript" src="./content/rates.js"></script>
+		<script type="text/javascript" src="./content/tpa.js"></script>
+		<script type="text/javascript" src="./js/libraries/jquery.minicolors.min.js"></script>
+		
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <div id="portArea">
+                <a class="connect" href="#">Connect</a>
+                <a class="navigation-menu-button" href="#">Menu</a>
+                <div id="navigation">
+                    <ul id="menu">
+                        <li data-name="configuration">Configuration</li>
+                        <li data-name="advanced">Advanced</li>
+                        <li data-name="data_output">Data Output</li>
+                        <li data-name="rates">Rates</li>
+                        <li data-name="tpa">TPA</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+            </div>
+        </div>
+    </body>
+</html>

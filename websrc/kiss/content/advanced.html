@@ -1,0 +1,149 @@
+<div class="configuration">
+
+	<div class="wrapper-half">
+
+		<div class="config_buttons">
+			<a id="save" class="config_button" href="#"
+				title="Save Settings to EEPROM">Save Settings</a>
+		</div>
+		<div class="clear-both"></div>
+
+		<div class="wrapper-full">
+
+		<div class="groupTitle">Custom FC orientation</div>
+
+		<table style="border: 0px;">
+			<tr>
+				<td width="100%" colspan="4"><input type="checkbox"
+					disabled="true" name="CBO" /> &nbsp;Use custom FC orientation</td>
+			</tr>
+			<tr>
+				<td width="40%">&nbsp;</td>
+				<td width="20%">Roll</td>
+				<td width="20%">Pitch</td>
+				<td width="20%">Yaw</td>
+			</tr>
+			<tr>
+				<td>FC orientation &deg;</td>
+				<td><input disabled="true" type="text" size="3" name="CBO0"
+					data-min="-180" data-max="180" data-step="1" data-precision="0"
+					value="0" /></td>
+				<td><input disabled="true" type="text" size="3" name="CBO1"
+					data-min="-180" data-max="180" data-step="1" data-precision="0"
+					value="0" /></td>
+				<td><input disabled="true" type="text" size="3" name="CBO2"
+					data-min="-180" data-max="180" data-step="1" data-precision="0"
+					value="0" /></td>
+			</tr>
+		</table>
+		
+		</div>
+		
+
+		<div id="serial" class="wrapper-full">
+			<div class="groupTitle">Serial config</div>
+			<dl class="general-settings">
+				<dt>
+					<span title="Serial config">OSD / Logger</span>
+				</dt>
+				<dd>
+					<select disabled="true" name="loggerConfig" id="loggerConfig">
+						<option value="0" selected>OSD</option>
+						<option value="1">Logger / 10%</option>
+						<option value="2">Logger / 20%</option>
+						<option value="3">Logger / 30%</option>
+						<option value="4">Logger / 40%</option>
+						<option value="5">Logger / 50%</option>
+						<option value="6">Logger / 60%</option>
+						<option value="7">Logger / 70%</option>
+						<option value="8">Logger / 80%</option>
+						<option value="9">Logger / 90%</option>
+						<option value="10">Logger / 100%</option>
+					</select>
+				</dd>
+			</dl>
+
+
+			<div id="loggerDebug" class="wrapper-full">
+				<div class="groupTitle">Logger Debug Configuration</div>
+				<dl class="general-settings">
+					<dt class="logger-debug">Debug fields</dt>
+					<dd class="logger-debug-variables">
+						<select name="loggerDebugVariables">
+							<option value="0">--</option>
+							<option value="1">Raw Gyroscope</option>
+							<option value="2">Raw Accelerometer</option>
+							<!-- option value="3">Loop parameters</option-->
+							<option value="4">ESC Voltage</option>
+							<option value="5">ESC Current</option>
+							<option value="6">ESC Temperature</option>
+							<option value="7">ESC RPMs</option>
+							<option value="8">ESC Consumption</option>
+						</select>
+					</dd>
+				</dl>
+			</div>
+
+			
+
+		</div>
+	</div>
+
+	<div class="wrapper-half">
+
+		<div id="lapTimer" class="wrapper-full">
+			<div class="groupTitle">Lap timer configuration</div>
+			<dl class="general-settings">
+				<dt class="lap-timer">Type and connection</dt>
+				<dd class="lap-timer-type-and-interface">
+					<select id="lapTimerTypeAndInterface"
+						name="lapTimerTypeAndInterface">
+						<option value="0">--</option>
+						<option value="17">EeasyRaceLapTimer on BUZZER pin</option>
+						<option value="18">EeasyRaceLapTimer on PWM5 pin</option>
+						<option value="19">EeasyRaceLapTimer on PWM6 pin</option>
+					</select> <select class="lap-timer-transponder-id"
+						name="lapTimerTransponderId">
+					</select>
+				</dd>
+			</dl>
+		</div>
+
+		<div id="bat" class="wrapper-full">
+			<div class="groupTitle">Lipo alarm</div>
+			<dl class="general-settings">
+				<dt title="low battery alarm" style="width:180px">Alarm when voltage is less then </dt>
+				<dd>
+					<input disabled="true" type="text" name="vbatAlarm" data-step="0.1"
+						data-min="0" data-max="26" data-precision="1" value="0.0" /><input
+						type="hidden" name="vbatAlarm" id="vbatAlarm" value="" />
+				</dd>
+			</dl>
+		</div>
+		
+		<div id="led" class="wrapper-full">
+				<div class="groupTitle">Led color</div>
+				<dl class="general-settings">
+					<dt>
+						<span title="Led Color">Select Color</span>
+					</dt>
+					<dd>
+						<select disabled="true" name="RGBSelector">
+							<option value="0,0,0">Black</option>
+							<option value="255,255,255">White</option>
+							<option value="255,255,0">Yellow</option>
+							<option value="255,123,0">Orange</option>
+							<option value="255,0,0">Red</option>
+							<option value="128,0,128">Purple</option>
+							<option value="0,0,255">Blue</option>
+							<option value="0,255,0">Green</option>
+							<option value="0,255,255">Cyan</option>
+							<option value="" selected>Custom</option>
+						</select><input type="hidden" id="colorPicker" /> <input type="hidden"
+							name="RGB" id="RGB" value="" />
+					</dd>
+				</dl>
+			</div>
+
+	</div>
+</div>

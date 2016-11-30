@@ -1,0 +1,13 @@
+.welcome {
+}
+.welcome .ads {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.welcome .ads img {
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+    border: 2px solid #ad0d0d;
+}

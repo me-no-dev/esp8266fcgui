@@ -1,0 +1,206 @@
+<div class="tpa">
+	
+		<div class="receiver wrapper-narrow">
+			<div class="groupTitle">Receiver</div>
+			<div class="bars"></div>
+		</div>
+
+		<div class="wrapper-wide">	
+			<div class="groupTitle">TPA influence chart</div>
+			<div id="charts">
+				<div id="tpa_chart" class="tpa_chart"></div>
+			</div>
+		</div>
+
+		<div class="clear-both"></div>
+		<div class="pids">
+			<div class="groupTitle">PIDS</div>
+			<table class="pids">
+				<tr>
+					<th class="name"></th>
+					<th class="p">P</th>
+					<th class="i">I</th>
+					<th class="d">D</th>
+					<th class="p">P</th>
+					<th class="i">I</th>
+					<th class="d">D</th>
+				</tr>
+				<tr class="roll">
+					<td>Roll</td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.001" data-precision="3" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+				</tr>
+				<tr class="pitch">
+					<td>Pitch</td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.001" data-precision="3" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+				</tr>
+				<tr class="yaw">
+					<td>Yaw</td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.001" data-precision="3" /></td>
+					<td><input type="text" data-min="0" data-max="65"
+						data-step="0.01" data-precision="2" /></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+					<td><div class="cpid">0.0</div></td>
+				</tr>
+				<tr class="TPA">
+					<td>TPA</td>
+					<td><input type="text" data-min="0" data-max="0.9"
+						data-step="0.01" data-precision="2" /></td>
+					<td><input type="text" data-min="0" data-max="0.9"
+						data-step="0.01" data-precision="2" /></td>
+					<td><input type="text" data-min="0" data-max="0.9"
+						data-step="0.01" data-precision="2" /></td>
+				</tr>
+			</table>
+
+			<div class="configuration" id="AC"
+				style="width: 100%; height: 200px; color: #FFF;">
+
+							<table  class="tpa_influence">
+								<tr>
+									<td width="65%" colspan="5"><input type="checkbox"
+										name="UCTI" /> &nbsp;Use custom TPA influence values</td>
+								</tr>
+								<tr>
+									<td width="65%" colspan="5"
+										style="text-align: center"><div class="groupTitle">TPA influence</div></td>
+								</tr>
+								<tr>
+									<td width="13%">&nbsp;</td>
+									<td width="13%">Zero Throttle</td>
+									<td width="13%">Breakpoint 1</td>
+									<td width="13%">Breakpoint 2</td>
+									<td width="13%">Full Throttle</td>
+								</tr>
+								<tr>
+									<td width="13%">Throttle [%]</td>
+									<td width="13%">0</td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BP1" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="30" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BP2" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="50" /></td>
+									<td width="13%">100</td>
+								</tr>
+								<tr>
+									<td width="13%">Influence [%]</td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BPI1" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="30" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BPI2" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="0" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BPI3" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="0" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="BPI4" data-min="0" data-max="100" data-step="1"
+										data-precision="0" value="100" /></td>
+								</tr>
+							</table>
+				
+					
+							<table class="voltage_influence">
+								<tr>
+									<td width="65%" colspan="4"><input type="checkbox" name="UVPID" /> &nbsp;Use PID Voltage Correction</td>
+								</tr>
+								<tr>
+									<td width="65%" colspan="4" style="text-align: center"><div class="groupTitle">Battery influence</div></td>
+								</tr>
+								<tr>
+									<td width="13%">&nbsp;</td>
+									<td width="13%">Voltage 1</td>
+									<td width="13%">Voltage 2</td>
+									<td width="13%">Voltage 3</td>
+								</tr>
+								<tr>
+									<td width="13%">Lipo Voltage [V]</td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LV1" data-min="0" data-max="100"
+										data-step="0.1" data-precision="1" value="12.8" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LV2" data-min="0" data-max="100"
+										data-step="0.1" data-precision="1" value="14.8" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LV3" data-min="0" data-max="100"
+										data-step="0.1" data-precision="1" value="16.8" /></td>
+								</tr>
+								<tr>
+									<td width="13%">PID strength [%]</td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LVP1" data-min="0" data-max="250" data-step="1"
+										data-precision="0" value="130" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LVP2" data-min="0" data-max="250" data-step="1"
+										data-precision="0" value="100" /></td>
+									<td width="13%"><input disabled="true" type="text"
+										size="3" name="LVP3" data-min="0" data-max="250" data-step="1"
+										data-precision="0" value="70" /></td>
+								</tr>
+								
+								<tr>
+									<td colspan="4" style="padding-top: 10px">
+									With battery voltage <select id="simulatedVoltage">
+										<option value="10">10v</option>
+										<option value="10.5">10.5v</option>
+										<option value="11">11v</option>
+										<option value="11.5">11.5v</option>
+										<option value="12">12v</option>
+										<option value="12.5">12.5v</option>
+										<option value="13">13v</option>
+										<option value="13.5">13.5v</option>
+										<option value="14">14v</option>
+										<option value="14.5">14.5v</option>
+										<option value="15" selected>15v</option>
+										<option value="15.5">15.5v</option>
+										<option value="16">16v</option>
+										<option value="16.5">16.5v</option>
+										<option value="17">17v</option>
+										<option value="17.5">17.5v</option>
+										<option value="18">18v</option>
+										<option value="18.5">18.5v</option>
+										<option value="19">19v</option>
+										<option value="19.5">19.5v</option>
+										<option value="20">20v</option>
+										<option value="20.5">20.5v</option>
+										<option value="21">21v</option>
+										<option value="21.5">21.5v</option>
+										<option value="22">22v</option>
+										<option value="22.5">22.5v</option>
+									</select> its influence on PIDS will be <span id="simulatedBatteryInfluence">0</span>
+									</td>
+								</tr>	
+							</table>
+						
+				</table>
+
+			</div>
+
+
+			<div class="config_buttons">
+			<a id="save" class="config_button" href="#"
+				title="Save Settings to EEPROM">Save Settings</a>
+		</div>
+		<div class="clear-both"></div>
+
+	</div>

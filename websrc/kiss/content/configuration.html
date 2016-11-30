@@ -1,0 +1,197 @@
+<div class="configuration">
+    <div class="wrapper-wide">
+        <div class="groupTitle">UAV Type</div>
+        <select class="mixer" name="mixer">
+            <!-- auto generated -->
+        </select>
+        <div class="mixerPreview">
+            <img class="mixer-image" src="./images/mixer/0.png" />
+        </div>
+        <div class="groupTitle">Receiver</div>
+        <select class="rxType">
+            <option value="0" style="display:none">Autodetect</option>
+            <option value="1">4-6 single Channel</option>
+            <option value="2" title="Gr. SumO & Deltang RX">PPM:Thr.,Roll,Pitch,Yaw</option>
+            <option value="3" title="OrangeRX">PPM:Pitch,Thr.,Roll,Yaw</option>
+            <option value="4">PPM:Thr.,Pitch,Yaw,Roll</option>
+            <option value="5">PPM:Roll,Pitch,Yaw,Thr.</option>
+            <option id="ppmadd1" value="12" style="display:none;">PPM:Pitch,Roll,Thr.,Yaw</option>
+            <option id="ppmadd2" value="13" style="display:none;">PPM:Roll,Pitch,Thr.,Yaw</option>
+            <option value="6">Spekt. Sat. DSM2</option>
+            <option value="7">Spekt. Sat. DSMX</option>
+            <option value="8">FrSky S-BUS</option>
+            <option value="15">FrSky S-BUS (not inverted)</option>
+            <option value="11">Futaba S-BUS</option>
+            <option value="9">Gr. SUMD</option>
+            <option value="10">Jeti EX Bus</option>
+       		<option id="mpxSRXL" value="14" style="display:none;">Multiplex SRXL</option>
+        </select>
+        <dl class="general_settings">
+	   <br />
+            <dt style="min-width:130px;">FS. levelmode Sec.: </dt><dd><input type="text" name="failsaveseconds" style="width:40px;" data-step="1" data-min="0" data-max="20" /></dd>
+	</dl>
+
+	
+    </div>
+    <div class="wrapper-narrow">
+        <div class="groupTitle">General Settings</div>
+        <dl class="general_settings">
+            <dt title="the minimum throttle for the motors">Min. Throttle</dt><dd><input type="text" name="minThrottle" data-step="1" data-min="0" data-max="2200" /></dd>
+            <dt title="the maximum throttle for the motors">Max. Throttle</dt><dd><input type="text" name="maxThrottle" data-step="1" data-min="0" data-max="2200" /></dd>
+            <dt title="the throttle value where the PID controller starts acting">Min. Command</dt><dd><input type="text" name="minCommand" data-step="1" data-min="0" data-max="2200" /></dd>
+            <dt title="the ESC's middle command for 3D mode use">Mid. Command</dt><dd><input type="text" name="midCommand" data-step="1" data-min="0" data-max="2200" /></dd>
+	  		<dt class="tricopter">Tri Yaw Mid.</dt><dd class="tricopter"><input type="text" name="TYmid" data-step="1" data-min="0" data-max="2200" /></dd>
+	  		<dt class="tricopter">Tri Yaw Invert</dt><dd  class="tricopter"><input type="checkbox" name="TYinv" /></dd>
+      		<dt><span title="ESC Mode">ESC Mode</span></dt><dd><select name="outputMode" id="outputMode">
+			<!--<option value="6">Dshot1200</option>-->
+			<option value="5">Dshot600</option>
+			<option value="4">Dshot300</option>
+			<option value="3">Dshot150</option>
+	    		<option value="2">OneShot 42</option>
+	    		<option value="1" selected>OneShot 125</option>
+	    		<option value="0">PWM</option>
+	   		</select></dd>
+      		<dt>3D Mode</dt><dd><input type="checkbox" disabled="true" name="3dMode"/></dd>
+        </dl>
+           <input type="hidden" name="secret" id="secret" value=""/>
+    </div>
+  
+    <div class="wrapper-wide">
+    
+    	<div class="wrapper-full">
+    		<div class="groupTitle">Presets</div>
+ 			<select id="prePID">
+				<option value="preset" selected="selected">Preset</option>
+				<option value="user">User</option>
+			</select>	      
+			<select id="presetSel">
+				<option value="Preset1" selected="selected">custom</option>
+			</select>
+			<select id="userSel">
+			</select>
+	       	<span id="shareButton">Share</span>
+    	</div>           
+    
+        <div class="groupTitle">PID &amp; Rates</div>
+        
+        <div class="wrapper-half" style="max-width: 245px">
+        <table class="pids">
+            <tr>
+                <th class="name"></th>
+                <th class="p">P</th>
+                <th class="i">I</th>
+                <th class="d">D</th>
+            </tr>
+            <tr class="roll">
+                <td>Roll</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.001" data-precision="3" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+            <tr class="pitch">
+                <td>Pitch</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.001" data-precision="3" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+            <tr class="yaw">
+                <td>Yaw</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.001" data-precision="3" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+            <tr class="TPA">
+                <td>TPA</td>
+                <td><input type="text" data-min="0" data-max="0.9" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="0.9" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="0.9" data-step="0.01" data-precision="2" /></td>
+            </tr>
+        </table>   
+        </div>
+        
+        <div class="wrapper-half"> 
+        
+        <table class="rates">
+            <tr>
+                <th class="name"></th>
+                <th class="rate">RC Rate</th>
+                <th class="expo">Rate</th>
+                <th class="curve">RC Curve</th>
+            </tr>
+         	<tr class="roll">
+                <td>Roll</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+            <tr class="pitch">
+                <td>Pitch</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+            <tr class="yaw">
+                <td>Yaw</td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                <td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            </tr>
+        </table>    
+        </div>
+        	
+          <div class="wrapper-full">
+           	<table class="levels">
+           		<tr>
+                	<th></th>
+                	<th>P</th>
+                	<th>I</th>
+                	<th>D</th>
+            	</tr>
+            	<tr class="level">
+                	<td>Level</td>
+                	<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+                	<td><input type="text" data-min="0" data-max="65" data-step="0.001" data-precision="3" /></td>
+                	<td><input type="text" data-min="0" data-max="65" data-step="0.01" data-precision="2" /></td>
+            	</tr>
+            	<tr class="level">
+                	<td>Max&deg;</td>
+	       			<td><input type="text" data-min="0" data-max="60" data-step="1" data-precision="0" /></td>
+            	</tr>
+            </table>
+         </div> 
+      
+        <div class="general_settings" style="margin-top:20px;">Firmware Version: <span  id="version"></span> | S/N: <span id="SN"></span><br /><br /></div>
+    </div>
+    
+    <div class="wrapper-narrow">
+        <div class="groupTitle">AUX Functions</div>
+        <dl id="aux0"></dl>
+        <dl id="aux1"></dl>
+        <dl id="aux4"></dl>
+        <dl id="aux2"></dl>
+        <dl id="aux3"></dl>
+    </div>    
+    
+     <div class="wrapper-narrow">
+    <div class="groupTitle">Filter</div>
+       	<dl>
+        <dt>LPF FRQ</dt>
+            <dd>
+                <select name="lpf">
+                    <option value="0">Off</option>
+                    <option value="1">High</option>
+                    <option value="2">Medium High</option>
+                    <option value="3">Medium</option>
+                    <option value="4">Medium Low</option>
+                    <option value="5">Low</option>
+                    <option value="6">Very Low</option>
+                </select>
+            </dd>
+        </dl>
+    </div>
+  
+    <div class="config_buttons">
+    	<a id="save" class="config_button" href="#" title="Save Settings to EEPROM">Save Settings</a>
+    </div>
+    <div class="clear-both"></div>
+</div>
